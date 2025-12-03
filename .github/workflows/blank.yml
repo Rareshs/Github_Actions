@@ -1,4 +1,4 @@
-name: First Workflow;
+name: First Workflow
 on: workflow_dispatch
 jobs:
   first_job:
@@ -8,3 +8,7 @@ jobs:
         run: echo "Hello!"
       - name: Print goodbye
         run : echo "Bye bye!"
+      - name: Test pipe operator
+        run : |
+              echo "First respose"
+              echo "Second response"
