@@ -1,0 +1,12 @@
+name: Test project
+on: push
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout
+      - name: Install dependecy
+        run: npm ci #uses exact same versions as in package-lock.json
+      - name: Run tests
+        run: npm test
