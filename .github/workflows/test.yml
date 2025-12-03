@@ -7,8 +7,8 @@ jobs:
       - name: Get code
         uses: actions/checkout@v6
       - name: Install dependecy
-        working-directory: ./02\ Starting\ Project/
+        working-directory: ./02 Starting Project
         run: npm ci #uses exact same versions as in package-lock.json
       - name: Run tests
-        working-directory: ./02\ Starting\ Project/
+        working-directory: ./02 Starting Project
         run: npm test
