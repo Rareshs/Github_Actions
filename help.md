@@ -25,3 +25,8 @@ finish before it starts this one
 **Multiple triggers**
 
 on: [push, workflow_dispatch]
+
+**Context information** metadata from github ${{toJson(github)}} - info about
+the workflow
+
+or env to see env variables in the workflow
