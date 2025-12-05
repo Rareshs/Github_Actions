@@ -12,3 +12,5 @@ jobs:
         run : |
               echo "First respose"
               echo "Second response"
+      - name: Use reusable workflow
+        uses: ./.github/workflows/reusable.yml

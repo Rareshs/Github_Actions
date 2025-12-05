@@ -115,3 +115,25 @@ continue-on-error: true
 
 **Matrix jobs** Run same job with different configs, on other runners or
 different version of something
+
+can also use include: to add a list with - of key:values
+
+for specific combinations you want:
+
+include:
+
+- node-version 18
+
+  operating-system:ubuntu-latest
+
+  - other values not specified initially
+
+  npm: 5
+
+to skip values from the generator matrix:
+
+exclude:
+
+**Reusable workflow** - it can be called from other workflows
+
+on: workflow_call
