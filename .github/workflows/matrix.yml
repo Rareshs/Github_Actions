@@ -1,0 +1,22 @@
+name: Matrix workflow
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        #goes through these combinations:
+    runs-on: ${{ matrix.operating-system }}
+    steps:
+      - name: Get code
+        uses: actions/checkout@v6
+      - name: Install dependecy
+        working-directory: ./02 Starting Project
+        run: npm ci
+      - name: Echo node versions
+        run: echo "Node versions ${{ matrix['node-version'] }}"
+      - name: Build project
+        working-directory: ./02 Starting Project
+        run: npm run build
+
